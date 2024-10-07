@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
+import { GameManagerService } from "../app/game-manager.service"
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'minimax';
+  gameState: string = "";
+
+  constructor(private gameManager: GameManagerService) { }
+
+
+  outputResults() {
+    if (this.gameManager.validateState(this.gameManager.board) != "") {
+      this.gameState = this.gameManager.validateState(this.gameManager.board) + "Won !";
+    }
+  }
 }
