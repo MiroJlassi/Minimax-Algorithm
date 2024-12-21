@@ -12,6 +12,7 @@
 }
 
   .cell:hover {
-    background-color: rgba(217, 217, 217, 0.5);
+    background-color: rgba(217, 217, 217, 0.2);
     cursor: pointer;
+    transform: scale(1.05);
   }

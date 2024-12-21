@@ -18,10 +18,10 @@ export class CellComponent {
       if (!this.clicked) {
         if (this.gameManager.turn % 2 == 0) {
           this.gameManager.turn++;
-          this.text = "X";
+          this.text = "❌";
         } else {
           this.gameManager.turn++;
-          this.text = "O";
+          this.text = "⭕";
         }
         this.clicked = true;
         this.gameManager.board[this.id] = this.text;
